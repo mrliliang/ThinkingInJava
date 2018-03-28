@@ -1,6 +1,6 @@
 package com.liang.initialization;
 
-import com.sun.org.apache.xerces.internal.util.SymbolHash;
+
 
 public class VarargType {
     static void f(Character... args) {
