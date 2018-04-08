@@ -6,6 +6,7 @@ import javax.crypto.Cipher;
 import javax.crypto.SecretKey;
 import javax.crypto.spec.IvParameterSpec;
 import javax.crypto.spec.SecretKeySpec;
+import java.io.UnsupportedEncodingException;
 
 public class DES3Utils {
 
@@ -92,7 +93,9 @@ public class DES3Utils {
     public static byte hexcharToByte(char ch) {
         if (ch >= '0' && ch <= '9') {
             return (byte)(ch - '0');
-        } else if (ch >= 'a' && ch <= 'f' || ch >= 'A' && ch <= 'F') {
+        } else if (ch >= 'a' && ch <= 'f') {
+            return (byte)(10 + ch - 'a');
+        } else if (ch >= 'A' && ch <= 'F') {
             return (byte)(10 + ch - 'A');
         }
 
@@ -122,16 +125,28 @@ public class DES3Utils {
     }
 
     public static void main(String[] args) {
-        //3DES
-        //3DES加密93AA35BDCB124C5180E9249A8CBD25E9
-        String key = "93AA35BDCB124C51"  //K1密钥
-                +"80E9249A8CBD25E9" //K2密钥
-                +"93AA35BDCB124C51";    //K3密钥
-        byte[] result = DES3Utils.encryptMode(hexStringToBytes(key), hexStringToBytes("0000000000000000"));
-        System.out.println("encrypted result:" + bytesToHexString(result));
+//        //3DES
+//        //3DES加密93AA35BDCB124C5180E9249A8CBD25E9
+//        String key = "93AA35BDCB124C51"  //K1密钥
+//                +"80E9249A8CBD25E9" //K2密钥
+//                +"93AA35BDCB124C51";    //K3密钥
+//        byte[] result = DES3Utils.encryptMode(hexStringToBytes(key), hexStringToBytes("0000000000000000"));
+//        System.out.println("encrypted result:" + bytesToHexString(result));
+//
+//        //3DES解密
+//        byte[] dnresult = DES3Utils.decryptMode(hexStringToBytes(key), result);
+//        System.out.println("decrypted result:" + bytesToHexString(dnresult));
 
-        //3DES解密
-        byte[] dnresult = DES3Utils.decryptMode(hexStringToBytes(key), result);
-        System.out.println("decrypted result:" + bytesToHexString(dnresult));
+
+        byte[] bytes = hexStringToBytes("BDB02850ED9A983489EC80CBE13F776BC71D38A0");
+        System.out.println();
+
+        byte[] bytes1 = "BDB02850ED9A983489EC80CBE13F776BC71D38A0".getBytes();
+
+        try {
+            System.out.println(bytesToHexString("桨(P須?夓€酸?wk?8?".getBytes("utf-8")));
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
     }
 }
