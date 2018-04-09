@@ -1,7 +1,5 @@
 package com.liang.reusing;
 
-import sun.security.provider.SHA;
-
 import static com.liang.util.Print.print;
 
 class Shape {
