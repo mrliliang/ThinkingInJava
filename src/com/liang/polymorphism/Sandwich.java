@@ -1,6 +1,6 @@
 package com.liang.polymorphism;
 
-import static com.liang.util.Print.print;
+        import static com.liang.util.Print.print;
 
 class Meal {
     Meal() {
