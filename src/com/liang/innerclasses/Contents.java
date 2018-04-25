@@ -1,5 +1,5 @@
 package com.liang.innerclasses;
 
-public interface Content {
+public interface Contents {
     int value();
 }

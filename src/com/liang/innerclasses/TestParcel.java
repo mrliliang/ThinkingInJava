@@ -1,7 +1,7 @@
 package com.liang.innerclasses;
 
 class Parcel4 {
-    private class PContents implements Content {
+    private class PContents implements Contents {
         private int i = 11;
 
         @Override
@@ -27,7 +27,7 @@ class Parcel4 {
         return new PDestination(s);
     }
 
-    public Content content() {
+    public Contents contents() {
         return new PContents();
     }
 }
@@ -35,7 +35,7 @@ class Parcel4 {
 public class TestParcel {
     public static void main(String[] args) {
         Parcel4 p = new Parcel4();
-        Content c = p.content();
+        Contents c = p.contents();
         Destination d = p.destination("Tasmania");
 //        Parcel4.PContents pc = p.new PContents();
     }
