@@ -1,7 +1,5 @@
 package com.liang.innerclasses.controller;
 
-import com.liang.innerclasses.Contents;
-
 public class GreenhouseContorls extends Controller {
 
     private boolean light = false;

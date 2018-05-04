@@ -1,10 +1,8 @@
 package com.liang.holding;
 
-        import javafx.util.converter.BooleanStringConverter;
+import java.util.*;
 
-        import java.util.*;
-
-        import static com.liang.util.Print.print;
+import static com.liang.util.Print.print;
 
 public class PrintingContainers {
     static Collection fill(Collection<String> collection) {

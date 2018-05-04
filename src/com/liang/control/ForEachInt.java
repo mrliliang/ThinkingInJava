@@ -1,8 +1,8 @@
 package com.liang.control;
 
-        import static com.liang.util.Print.print;
-        import static com.liang.util.Print.printnb;
-        import static com.liang.util.Range.range;
+import static com.liang.util.Print.print;
+import static com.liang.util.Print.printnb;
+import static com.liang.util.Range.range;
 
 public class ForEachInt {
     public static void main(String[] args) {

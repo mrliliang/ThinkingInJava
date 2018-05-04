@@ -1,12 +1,9 @@
 package com.liang.holding;
 
 
-
-
 import typeinfo.pets.*;
 
 import java.util.*;
-
 
 import static com.liang.util.Print.print;
 

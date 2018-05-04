@@ -1,8 +1,8 @@
 package com.liang.interfaces.classprocessor;
 
-        import java.util.Arrays;
+import java.util.Arrays;
 
-        import static com.liang.util.Print.print;
+import static com.liang.util.Print.print;
 
 class Processor {
     public String name() {
