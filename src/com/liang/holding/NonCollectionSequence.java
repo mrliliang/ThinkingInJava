@@ -3,17 +3,17 @@ package com.liang.holding;
 import typeinfo.pets.Pet;
 import typeinfo.pets.Pets;
 
-import java.util.AbstractCollection;
 import java.util.Iterator;
 
-public class CollectionSequence extends AbstractCollection<Pet> {
 
-    private Pet[] pets = Pets.createArray(8);
+class PetSequence {
+    protected Pet[] pets = Pets.createArray(8);
+}
 
-    @Override
+public class NonCollectionSequence extends PetSequence {
     public Iterator<Pet> iterator() {
         return new Iterator<Pet>() {
-            private int index = 0;
+            private int index;
             @Override
             public boolean hasNext() {
                 return index < pets.length;
@@ -30,14 +30,8 @@ public class CollectionSequence extends AbstractCollection<Pet> {
         };
     }
 
-    @Override
-    public int size() {
-        return pets.length;
-    }
-
     public static void main(String[] args) {
-        CollectionSequence c = new CollectionSequence();
-        InterfaceVsInterator.display(c);
-        InterfaceVsInterator.display(c.iterator());
+        NonCollectionSequence nc = new NonCollectionSequence();
+        InterfaceVsInterator.display(nc.iterator());
     }
 }
