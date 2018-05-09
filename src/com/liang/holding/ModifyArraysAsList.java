@@ -17,6 +17,6 @@ public class ModifyArraysAsList {
         Collections.shuffle(list2, rand);
         System.out.println("After shuffling: " + list2);
         System.out.println("array: " + Arrays.toString(ia));
-        
+
     }
 }
