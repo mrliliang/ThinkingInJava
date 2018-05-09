@@ -1,4 +1,4 @@
 package com.liang.exceptions;
 
-public class InheritingException {
+public class InheritingException extends Exception {
 }
