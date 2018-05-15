@@ -34,6 +34,11 @@ public class InputFile {
             s = in.readLine();
         } catch (IOException e) {
             throw new RuntimeException("readLine() failed");
+//            try {
+//                throw new IllegalAccessException();
+//            } catch (IllegalAccessException e1) {
+//                e1.printStackTrace();
+//            }
         }
         return s;
     }
