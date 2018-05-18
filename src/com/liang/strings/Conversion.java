@@ -1,7 +1,6 @@
 package com.liang.strings;
 
 import java.math.BigInteger;
-import java.text.Normalizer;
 import java.util.Formatter;
 
 public class Conversion {
