@@ -3,7 +3,7 @@ package com.liang.typeinfo.pets;
 import java.util.ArrayList;
 import java.util.List;
 
-public class FornameCreator extends PetCreator {
+public class ForNameCreator extends PetCreator {
 
     private static List<Class<? extends Pet>> types = new ArrayList<>();
     private static String[] typeNames = {
