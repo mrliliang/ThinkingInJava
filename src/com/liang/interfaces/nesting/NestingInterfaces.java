@@ -66,7 +66,7 @@ interface E {
 
     void g();
 
-//    private interface I { }
+//    private interfacea I { }
 }
 
 public class NestingInterfaces {

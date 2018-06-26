@@ -26,7 +26,7 @@ class FancyToy extends Toy implements HasBatteries, Waterproof, Shoots {
 
 public class ToyTest {
     static void printInfo(Class cc) {
-        print("Class name: " + cc.getName() + " is interface? [" + cc.isInterface() + "]");
+        print("Class name: " + cc.getName() + " is interfacea? [" + cc.isInterface() + "]");
         print("Simple name: " + cc.getSimpleName());
         print("Canoncial name " + cc.getCanonicalName());
     }

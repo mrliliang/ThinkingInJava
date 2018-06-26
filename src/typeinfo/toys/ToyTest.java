@@ -22,7 +22,7 @@ implements HasBatteries, Waterproof, Shoots {
 public class ToyTest {
   static void printInfo(Class cc) {
     print("Class name: " + cc.getName() +
-      " is interface? [" + cc.isInterface() + "]");
+      " is interfacea? [" + cc.isInterface() + "]");
     print("Simple name: " + cc.getSimpleName());
     print("Canonical name : " + cc.getCanonicalName());
   }
@@ -52,19 +52,19 @@ public class ToyTest {
     printInfo(obj.getClass());
   }
 } /* Output:
-Class name: typeinfo.toys.FancyToy is interface? [false]
+Class name: typeinfo.toys.FancyToy is interfacea? [false]
 Simple name: FancyToy
 Canonical name : typeinfo.toys.FancyToy
-Class name: typeinfo.toys.HasBatteries is interface? [true]
+Class name: typeinfo.toys.HasBatteries is interfacea? [true]
 Simple name: HasBatteries
 Canonical name : typeinfo.toys.HasBatteries
-Class name: typeinfo.toys.Waterproof is interface? [true]
+Class name: typeinfo.toys.Waterproof is interfacea? [true]
 Simple name: Waterproof
 Canonical name : typeinfo.toys.Waterproof
-Class name: typeinfo.toys.Shoots is interface? [true]
+Class name: typeinfo.toys.Shoots is interfacea? [true]
 Simple name: Shoots
 Canonical name : typeinfo.toys.Shoots
-Class name: typeinfo.toys.Toy is interface? [false]
+Class name: typeinfo.toys.Toy is interfacea? [false]
 Simple name: Toy
 Canonical name : typeinfo.toys.Toy
 *///:~
