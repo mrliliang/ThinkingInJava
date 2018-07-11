@@ -1,10 +1,9 @@
 package com.liang.generics;
 
+import com.liang.util.Sets;
+
 import java.lang.reflect.Method;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Set;
-import java.util.TreeSet;
+import java.util.*;
 
 public class ContainerMethodDifferences {
     static Set<String> methodSet(Class<?> type) {
@@ -32,5 +31,32 @@ public class ContainerMethodDifferences {
     static void difference(Class<?> superset, Class<?> subset) {
         System.out.print(superset.getSimpleName() + " extends " + subset.getSimpleName() + ", " +
             "adds: ");
+
+        Set<String> comp = Sets.difference(methodSet(superset), methodSet(subset));
+        comp.removeAll(object);
+        System.out.println(comp);
+        interfaces(superset);
+    }
+
+    public static void main(String[] args) {
+        System.out.println("Collection: " + methodSet(Collection.class));
+        interfaces(Collection.class);
+        difference(Set.class, Collection.class);
+        difference(HashSet.class, Set.class);
+        difference(LinkedHashSet.class, HashSet.class);
+        difference(TreeSet.class, Set.class);
+        difference(List.class, Collection.class);
+        difference(ArrayList.class, List.class);
+        difference(LinkedList.class, List.class);
+        difference(Queue.class, Collection.class);
+        difference(PriorityQueue.class, Queue.class);
+
+        System.out.println();
+
+        System.out.println("Map: " + methodSet(Map.class));
+        difference(HashMap.class, Map.class);
+        difference(LinkedHashMap.class, HashMap.class);
+        difference(SortedMap.class, Map.class);
+        difference(TreeMap.class, Map.class);
     }
 }
